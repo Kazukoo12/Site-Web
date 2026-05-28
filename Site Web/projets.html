@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projets — Lucas Fernandes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="name">Lucas Fernandes</h1>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projets.html" class="active">Projets</a>
+        <a href="contact.html">Contact</a>
+        <a class="download" href="assets/CV%20Lucas%20fernandes.pdf" target="_blank" rel="noopener noreferrer">Voir le CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="summary">
+      <h2>Projets phares</h2>
+      <div class="projects-list">
+        <article style="margin-bottom:12px">
+          <h4>Application de contrôle d'un char</h4>
+          <p class="muted">Projet personnel</p>
+          <p>Développement de l'interface et de la logique de contrôle, tests et optimisation de la fiabilité.</p>
+        </article>
+        <article style="margin-bottom:12px">
+          <h4>Site e-commerce</h4>
+          <p class="muted">Projet en équipe</p>
+          <p>Participation à la mise en place complète du site, gestion de projet en méthode agile et optimisation UX.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Lucas Fernandes</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

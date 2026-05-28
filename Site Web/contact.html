@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Lucas Fernandes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="name">Lucas Fernandes</h1>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a class="download" href="assets/CV%20Lucas%20fernandes.pdf" target="_blank" rel="noopener noreferrer">Voir le CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="summary">
+      <h2>Contact</h2>
+      <p>Pour me contacter directement, utilisez le formulaire ci‑dessous ou mes coordonnées professionnelles.</p>
+
+      <form id="contact-form">
+        <input type="text" name="from_name" required placeholder="Votre nom" />
+        <input type="email" name="from_email" required placeholder="Votre email" />
+        <input type="text" name="subject" placeholder="Sujet" />
+        <textarea name="message" rows="6" required placeholder="Votre message..."></textarea>
+        <p>
+          <button type="submit" class="btn">Envoyer</button>
+          <button type="button" id="copy-email" class="btn ghost" style="display:none;margin-left:8px">Copier l'adresse</button>
+          <span id="form-status" class="muted" style="margin-left:10px"></span>
+        </p>
+      </form>
+
+      <div class="summary">
+        <h3>Mes coordonnées</h3>
+        <p><strong>Téléphone :</strong> <a href="tel:+33769660594">07.69.66.05.94</a></p>
+        <p><strong>Email :</strong> <a href="mailto:lucas.fernandes260002@gmail.com">lucas.fernandes260002@gmail.com</a></p>
+        <p><strong>Adresse :</strong> 50 rue Georges Mandel, 26000 Valence</p>
+      </div>
+
+      <p>Vous pouvez aussi retrouver mes profils :</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/lucas-fernandes-5270792b8/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/Kazukoo12?tab=overview&from=2025-12-01&to=2025-12-31" target="_blank" rel="noreferrer">GitHub</a></li>
+      </ul>
+      <p>Si vous préférez un lien externe vers mon CV, utilisez : <a href="assets/CV%20Lucas%20fernandes.pdf" target="_blank">Téléchargez mon CV</a>.</p>
+    </section>
+
+  </main>
+
+  <script>
+    // Envoi via mailto: ouvre le client mail local avec les champs préremplis
+    const RECIPIENT = 'lucas.fernandes260002@gmail.com';
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    const copyBtn = document.getElementById('copy-email');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = form.from_name.value || '';
+      const fromEmail = form.from_email.value || '';
+      const subject = form.subject.value || '(sans sujet)';
+      const body = `Nom: ${name}\nEmail: ${fromEmail}\n\n${form.message.value}`;
+
+      const mailto = 'mailto:' + encodeURIComponent(RECIPIENT) +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      status.textContent = 'Ouverture du client mail... Si rien ne se passe, cliquez sur "Copier l\'adresse".';
+      // Affiche le bouton de copie au cas où le client mail n'ouvre pas
+      copyBtn.style.display = 'inline-block';
+
+      // Essaye d'ouvrir le client mail local
+      window.location.href = mailto;
+    });
+
+    copyBtn.addEventListener('click', function(){
+      navigator.clipboard.writeText('lucas.fernandes260002@gmail.com').then(function(){
+        status.textContent = 'Adresse copiée dans le presse-papiers.';
+      }).catch(function(){
+        // Fallback si clipboard non disponible
+        const range = document.createRange();
+        const node = document.createTextNode('lucas.fernandes260002@gmail.com');
+        document.body.appendChild(node);
+        range.selectNode(node);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        try{
+          document.execCommand('copy');
+          status.textContent = 'Adresse copiée dans le presse-papiers.';
+        }catch(err){
+          status.textContent = 'Impossible de copier automatiquement. Voici l\'adresse : lucas.fernandes260002@gmail.com';
+        }
+        window.getSelection().removeAllRanges();
+        document.body.removeChild(node);
+      });
+    });
+  </script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Lucas Fernandes</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

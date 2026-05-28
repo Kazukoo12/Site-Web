@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Lucas Fernandes — CV</title>
+	<meta name="description" content="CV de Lucas Fernandes — Développeur web" />
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body id="top">
+	<header class="site-header">
+		<div class="container">
+			<h1 class="name">Lucas Fernandes</h1>
+			<p class="tag">Technicien informatique polyvalent</p>
+			<nav class="main-nav">
+				<a href="index.html" class="active">Accueil</a>
+				<a href="about.html">À propos</a>
+				<a href="projets.html">Projets</a>
+				<a href="contact.html">Contact</a>
+			<a class="download" href="assets/CV%20Lucas%20fernandes.pdf" target="_blank" rel="noopener noreferrer">Voir le CV</a>
+		</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="hero">
+			<div class="hero-left">
+        <h2>Technicien informatique polyvalent</h2>
+        <p>Diplômé d'un BTS Systèmes Numériques avec une expérience en maintenance bureautique. Capable d'analyser les besoins des utilisateurs et d'y répondre efficacement.</p>
+        <p class="quicklinks">
+          <a class="btn" href="assets/CV%20Lucas%20fernandes.pdf" target="_blank" rel="noopener noreferrer">Voir mon CV</a>
+          <a class="btn ghost" href="contact.html">Me contacter</a>
+        </p>
+      </div>
+      <div class="hero-right">
+        <div class="photo">Photo ici</div>
+      </div>
+    </section>
+
+    <section class="summary">
+      <h3>Profil</h3>
+      <p>Je suis Lucas Fernandes, technicien informatique polyvalent. J'ai développé des compétences en support utilisateur, maintenance bureautique, installation de postes et administration de réseaux, avec une approche rigoureuse et orientée résultats.</p>
+    </section>
+
+    <section class="summary">
+      <h3>Compétences techniques</h3>
+      <ul class="skills">
+        <li>Installation et paramétrage Windows 10</li>
+        <li>Administration Windows Server 2016</li>
+        <li>Démontage et remontage PC</li>
+        <li>Support et dépannage informatique</li>
+        <li>Création de pages web</li>
+        <li>Application mobile de contrôle</li>
+      </ul>
+    </section>
+
+    <section class="experience">
+      <h3>Expériences professionnelles</h3>
+      <article>
+        <h4>Restordi</h4>
+        <p class="muted">1 avril 2026</p>
+        <p>Reconditionnement informatique : diagnostic et remise en état de postes, tests et préparations pour la revente.</p>
+      </article>
+      <article>
+        <h4>King Okaz</h4>
+        <p class="muted">10 février 2026 – 14 mars 2026</p>
+        <p>Caisse et accueil clients, réception, renseignements clients et mise en rayon.</p>
+      </article>
+      <article>
+        <h4>Koesio Eole</h4>
+        <p class="muted">04 novembre 2024 – 08 novembre 2024</p>
+        <p>Test et nettoyage d'imprimantes, observation de la réparation et maintenance de matériel d'impression.</p>
+      </article>
+      <article>
+        <h4>Réseau Informatique et Service (RIS)</h4>
+        <p class="muted">2022-2023 – 8 semaines</p>
+        <p>Installation Windows, dépannage informatique et installation d'imprimantes.</p>
+      </article>
+    </section>
+
+    <section class="summary">
+      <h3>Formation</h3>
+      <p><strong>2024</strong> BTS Systèmes Numériques, spécialité Informatique et Réseau — Lycée Algoud-Laffemas</p>
+      <p><strong>2022</strong> Certification PIX — Attestation de suivi SecNum académie</p>
+      <p><strong>2022</strong> Bac Pro Système numérique (Mention Assez bien) — Lycée Algoud-Laffemas</p>
+    </section>
+
+    <section class="summary">
+      <h3>Langues</h3>
+      <p>Anglais — Niveau B1</p>
+    </section>
+
+    <section class="summary">
+      <h3>Savoir-être</h3>
+      <ul class="skills">
+        <li>Curieux</li>
+        <li>Assidu</li>
+        <li>Investi</li>
+        <li>Travail en équipe</li>
+        <li>Passionné</li>
+        <li>Organisé</li>
+        <li>Patient</li>
+        <li>Rigoureux</li>
+      </ul>
+	<footer class="site-footer">
+		<div class="container">
+			<p>© <span id="year"></span> Lucas Fernandes — <a href="contact.html">contact</a></p>
+			<p>Email: <a href="mailto:lucas.fernandes260002@gmail.com">lucas.fernandes260002@gmail.com</a></p>
+		</div>
+	</footer>
+
+	<a href="#top" class="back-to-top" aria-label="Retour en haut">↑</a>
+
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		const backToTop = document.querySelector('.back-to-top');
+		window.addEventListener('scroll', function() {
+			if (!backToTop) return;
+			backToTop.classList.toggle('visible', window.scrollY > 300);
+		});
+		backToTop.addEventListener('click', function(event) {
+			event.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	</script>
+</body>
+</html>
+
+
