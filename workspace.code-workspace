@@ -1,19 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../../../Mes Sites Web/CV de Lucas Fernandes"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Projet",
-		"chat.tools.terminal.autoApprove": {
-			"/^cd \"c:\\\\Users\\\\Lucas\\\\Projet\\\\Site Web\"; python -c \"import os; path='assets\\\\\\\\CV Lucas fernandes\\.pdf'; print\\('EXISTS', os\\.path\\.exists\\(path\\)\\); from PyPDF2 import PdfReader; r=PdfReader\\(path\\); text='\\\\n'\\.join\\(page\\.extract_text\\(\\) or '' for page in r\\.pages\\); print\\(text\\[:2000\\]\\)\"$/": {
-				"approve": true,
-				"matchCommandLine": true
-			}
-		}
-	}
+    "folders": [
+        {
+            "path": "assets"
+        }
+    ]
 }
